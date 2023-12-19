@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
-import Cookies from 'js-cookie';
+import SignUpPage from './pages/SignUpPage';
 import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Routes>
         <Route path="/login" element={<LoginPage />} />
-        
+        <Route path="/signup" element={<SignUpPage />} />
         <Route
           path = "/"
           element={

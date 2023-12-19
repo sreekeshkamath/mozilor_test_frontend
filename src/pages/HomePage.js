@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
+import {useNavigate} from 'react-router-dom';
 
 function HomePage() {
     const [productsData, setProductsData] = useState([]);
     const [selectedFile, setSelectedFile] = useState(null);
     const [refreshKey, setRefreshKey] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchData();
     }, [refreshKey]);
+
+    const handleLogout = () => {
+        Cookies.remove('authToken');
+        navigate('/login');
+    }
 
     const fetchData = async () => {
         try {
@@ -66,6 +73,7 @@ function HomePage() {
     return (
         <div className="container mt-5">
             <h1>Homepage</h1>
+            <button className="btn btn-danger float-end" onClick={handleLogout}>Logout</button>
             <table className="table table-bordered table-striped">
                 <thead className="thead-dark">
                     <tr>

@@ -74,6 +74,7 @@ function LoginPage() {
                 />
             </div>
             {errorMessage && <div className='alert alert-danger'>{errorMessage}</div>}
+            <div>New user? <a href="/signup">Sign up here.</a></div>
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
         </div>
