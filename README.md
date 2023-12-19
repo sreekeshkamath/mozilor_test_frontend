@@ -4,7 +4,7 @@
 Make sure you have the following in your Linux system.
 1) npm: `9.5.1`
 2) node: `18.16.0`
-3) mozilor_test_backend: [https://github.com/sreekeshkamath/mozilor_test](https://github.com/sreekeshkamath/mozilor_test) - Make sure you have it up and running
+3) mozilor_test_backend: [https://github.com/sreekeshkamath/mozilor_test](https://github.com/sreekeshkamath/mozilor_test) - Make sure you have it up and running.
 
 ### Deploying Frontend
 1) `cd mozilor_test_frontend`
